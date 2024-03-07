@@ -1,0 +1,53 @@
+.item-count-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efefefca;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.decrement-btn,
+.increment-btn {
+    background-color: #93c572;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.quantity {
+    margin: 0 20px;
+    font-size: 16px;
+   
+}
+
+
+
+.add-to-cart-btn {
+    background-color: #93c572;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #909090;
+}
+
+.decrement-btn:hover,
+.increment-btn:hover {
+    background-color: #75a04e;
+}

@@ -1,10 +1,14 @@
 import CartWidget from "../CartWidget/CartWidget"
+import {Link, NavLink} from 'react-router-dom'
 
 const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg " style={{ backgroundColor: '#93c572' }}>
             <div className="container-fluid">
-                <a className="navbar-brand ms-4 text-white" href="#">Pet Paradise</a>
+                <Link to="/">
+
+                <h2 className="navbar-brand ms-4 text-white" >Pet Paradise</h2>
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -24,12 +28,13 @@ const NavBar = () => {
                                Productos
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Alimentos</a></li>
-                                <li><a className="dropdown-item" href="#">Juguetes</a></li>
-                                <li><a className="dropdown-item" href="#">Accesorios</a></li>
+                            <li><NavLink to="/category/alimentos" className={({ isActive }) => isActive ? 'active dropdown-item' : 'dropdown-item'}>Alimentos</NavLink></li>
+                                <li><NavLink to="/category/juguetes" className={({ isActive }) => isActive ? 'active dropdown-item' : 'dropdown-item'}>Juguetes</NavLink></li>
+                                <li><NavLink to="/category/accesorios" className={({ isActive }) => isActive ? 'active dropdown-item' : 'dropdown-item'}>Accesorios</NavLink></li>
                                 <li><hr className="dropdown-divider" /></li>
-                                <li><a className="dropdown-item" href="#">Ofertas Especiales</a></li>
+                                <li><NavLink to="/category/ofertas" className={({ isActive }) => isActive ? 'active dropdown-item' : 'dropdown-item'}>Ofertas Especiales</NavLink></li>
                             </ul>
+                           
                         </li>
                         <li className="nav-item">
                             <CartWidget/>
